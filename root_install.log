@@ -1,0 +1,10 @@
+===== EasyRoot - Inicio: 24/05/2026 18:45:56,38 =====
+Script: C:\Users\Alastor\Desktop\personal\EasyRoot\install_root.bat
+[SIM] Modo simulador activo.
+[INFO] 24/05/2026 18:45:56,39 - Modo: SIMULATOR
+[INFO] 24/05/2026 18:45:56,44 - Herramienta detectada: adb
+[INFO] 24/05/2026 18:45:56,50 - Herramienta detectada: fastboot
+[ERROR] 24/05/2026 18:45:56,62 - No hay dispositivo ADB en estado 'device'. Revisa cable, depuracion USB y autorizacion
+List of devices attached
+
+[ERROR] 24/05/2026 18:45:57,26 - No se detecto fastboot en 40 segundos

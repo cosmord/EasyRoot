@@ -2,6 +2,8 @@
 
 Script por lotes para extraer una imagen parcheada con Magisk desde un dispositivo Android, reiniciar a fastboot y flashear `boot_a` y `boot_b`.
 
+Diseñado para facilitar el proceso de rooteo en dispositivos con esquema A/B, como el Xiaomi Redmi 12C NFC. El script automatiza los pasos necesarios para instalar Magisk sin necesidad de usar herramientas adicionales en PC.
+
 ## Requisitos
 
 - `adb` y `fastboot` instalados y disponibles en `PATH`.
@@ -44,6 +46,6 @@ install_root.bat --debug
 
 ## Notas
 
-- Este flujo está pensado para dispositivos con esquema A/B.
+- Este flujo está pensado para dispositivos con esquema A/B. En concreto, está diseñado para el Xiaomi Redmi 12C NFC. Puede no funcionar en otros modelos o marcas, revisar compatibilidad antes de usar.
 - Asegúrate de que la imagen parcheada corresponda exactamente al firmware instalado en tu teléfono.
 - Flashear imágenes incorrectas puede dejar el dispositivo sin arrancar.
