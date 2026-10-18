@@ -50,15 +50,14 @@ if "%MODE%"=="NORMAL" (
 	)
 )
 
-for %%I in ("%IMG%") do set "IMG_SIZE=%%~zI"
-if !IMG_SIZE! lss %MIN_IMG_SIZE% (
-	if "%MODE%"=="NORMAL" (
-		call :log_error "Tamano de imagen sospechoso (!IMG_SIZE! bytes). Verifica que magisk_patched.img sea correcto"
-		goto :fatal
-	)
-)
-
 if exist "%IMG%" (
+	for %%I in ("%IMG%") do set "IMG_SIZE=%%~zI"
+	if !IMG_SIZE! lss %MIN_IMG_SIZE% (
+		if "%MODE%"=="NORMAL" (
+			call :log_error "Tamano de imagen sospechoso (!IMG_SIZE! bytes). Verifica que magisk_patched.img sea correcto"
+			goto :fatal
+		)
+	)
 	for /f "usebackq delims=" %%H in (`powershell -NoProfile -Command "try { (Get-FileHash -Algorithm SHA256 -LiteralPath '%IMG%' -ErrorAction Stop).Hash } catch { echo ERROR }"`) do (
 		if not "%%H"=="ERROR" (
 			if not defined IMG_HASH set "IMG_HASH=%%H"
